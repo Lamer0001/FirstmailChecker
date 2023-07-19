@@ -90,7 +90,7 @@ for count, account in enumerate(accounts, 1):
 
             # проверка, вошел ли в аккаунт
             try:
-                not_error = WebDriverWait(driver, 7).until(EC.visibility_of_element_located(
+                not_error = WebDriverWait(driver, 15).until(EC.visibility_of_element_located(
                     (By.XPATH, '//*[@id="__layout"]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[1]/A[1]/DIV[1]/DIV[2]/H6[1]')))
                 if not_error:
                     valid_accounts.append(account)
